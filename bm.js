@@ -23,7 +23,9 @@ javascript:(function() {
   function moveMarie() {
     const memberBar = document.querySelector('.party-members');
     const marie = getElementByXpath('//div[contains(@class, "member-details")][.//span[text() = "MarenaVarena"]]', memberBar);
-    memberBar.appendChild(marie);
+    if (memberBar && marie) {
+      memberBar.appendChild(marie);
+    }
   }
 
   const url = 'https://habitica.com/';
